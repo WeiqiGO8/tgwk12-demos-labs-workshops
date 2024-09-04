@@ -1,17 +1,23 @@
 {
 	"name": "db1",
 	"version": "1.0.0",
-	"main": "index.js",
+	"description": "My first database",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/WeiqiGO8/tgwk12-demos-labs-workshops.git"
 	},
+	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "",
+	"keywords": [
+		"Node",
+		"Express",
+		"SQLite3",
+		"JavaScript"
+	],
+	"author": "Hannah Jansson",
 	"license": "ISC",
-	"description": "",
 	"dependencies": {
 		"express": "^4.19.2",
 		"sqlite3": "^5.1.7"
