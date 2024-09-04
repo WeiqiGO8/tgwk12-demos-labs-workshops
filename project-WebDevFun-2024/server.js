@@ -19,11 +19,13 @@ db = new sqlite3.Database(dbFile);
 // define the different "/"_|routes|
 // default "/" route
 app.get("/", (req, res) => {
+	console.log("Sending the default route");
 	res.send("Hello 'World'!");
 });
 
 // CV
 app.get("/cv", (req, res) => {
+	console.log("Sending the route cv!");
 	res.sendFile(__dirname + "/views/mycv-02.html");
 });
 
@@ -33,7 +35,7 @@ app.get("/rawpersons", (req, res) => {
 		if (error) {
 			console.log(error);
 		} else {
-			console.log("sending back the persons...");
+			console.log("sending back the list of persons...");
 			res.send(thePersons);
 		}
 	});
