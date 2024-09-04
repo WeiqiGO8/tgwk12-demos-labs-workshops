@@ -48,14 +48,14 @@ app.get("/listpersons", (req, res) => {
 			let listPersonsHTML = "<ul>";
 			rawPersons.forEach((onePerson) => {
 				listPersonsHTML += "<li>";
-				listPersonsHTML += `${(onePerson, pid)}, `;
-				listPersonsHTML += `${(onePerson, fname)}, `;
-				listPersonsHTML += `${(onePerson, lname)}, `;
-				listPersonsHTML += `${(onePerson, age)}, `;
-				listPersonsHTML += `${(onePerson, email)}, `;
+				listPersonsHTML += `${onePerson.fname}`;
+				listPersonsHTML += `${onePerson.lname}`;
+				listPersonsHTML += `${onePerson.age}`;
+				listPersonsHTML += `${onePerson.email}`;
 				listPersonsHTML += "</li>";
 			});
 			listPersonsHTML += "</ul>";
+			console.log(listPersonsHTML);
 			res.send(listPersonsHTML);
 		}
 	});
